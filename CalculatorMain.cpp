@@ -4,6 +4,16 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!";
+    int num;
+    
+    cin >> num;
+    if(num == 0)
+    {
+        cout << "Hello World!";
+    }
+    else
+    {
+        cout << "Goodbye World!";
+    }
     return 0;
 }
