@@ -1,13 +1,14 @@
-// This class calculates the combination of
-// two integers, n and r
 #ifndef COMBINATION_H
 #define COMBINATION_H
 
-class Combination
+namespace C
 {
-    public:
-        int fact(int x);
-        int combination(int n, int r);
-};
+    class Combination
+    {
+        public:
+            int fact(int x);
+            int calculateCombination(int n, int r);
+    };
+}
 
 #endif

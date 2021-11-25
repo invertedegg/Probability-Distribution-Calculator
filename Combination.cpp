@@ -1,6 +1,10 @@
-#include "Combination.h"
+// This class calculates the combination of
+// two integers, n and r
 
-int fact(int x)
+#include "Combination.h"
+using namespace C;
+
+int Combination::fact(int x)
 {
     int num = 1;
 
@@ -11,7 +15,7 @@ int fact(int x)
     return num;
 }
 
-int calculateCombination(int n, int r)
+int Combination::calculateCombination(int n, int r)
 {
-    return (fact(n)/(fact(r)*fact(n-r)));
+    return (Combination::fact(n)/(Combination::fact(r)*Combination::fact(n-r)));
 }
