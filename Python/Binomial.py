@@ -34,5 +34,5 @@ class Binomial:
                 ans += Combination.calculateCombination(n, a) * math.pow(p, a) * math.pow((1 - p), (n - a))
             return ans
         else:
-            print("-----BAD INPUT-----")
-            s()
+            print("------------------BAD INPUT--------------------")
+            self.solveFor()
