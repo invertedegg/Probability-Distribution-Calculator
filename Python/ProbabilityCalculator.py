@@ -3,18 +3,26 @@
 # is the main file to be executed.
 import Binomial
 
+B = Binomial.Binomial()
+
 def Binomial():
-    x = input("Enter # of successes: ")
-    n = input("Enter # of trials: ")
-    p = input("Enter probability of success")
-    ansp = input("Enter probability of X (enter if calculating for")
+    solveFor = B.solveFor()
+    print("-----------------------------------------------")
 
-
+    n , x, p = '', '', ''
+    while n is '':
+        n = int(input("Enter # of trials: "))
+    while x is '': 
+        x = int(input("Enter # of successes: "))
+    while p is '':
+        p = float(input("Enter probability of success: "))
+    ans = B.findProbability(x, n, p, solveFor);
+    return ans
 
 
 def printHeader():
     print("-----------------------------------------------\n"
-          "|          Probability Calculator             |\n"
+          "|           Probability Calculator            |\n"
           "|   By invertedegg (github.com/invertedegg)   |\n"
           "-----------------------------------------------\n\n")
 
@@ -29,10 +37,14 @@ def getChoice(a):
 def main():
     printHeader()
     choice = int(getChoice(0))
-    print("\n-----------------------------------------------")
+    print("-----------------------------------------------")
     while choice is not 0:
+
         if choice == 1:
-            Binomial()
+            ans = Binomial()
+        
+        print("\nAnswer: " + "{:0.5f}".format(ans))
+        print("-----------------------------------------------")
         choice = int(getChoice(1))
     print("Thank you! Exiting...")
 
