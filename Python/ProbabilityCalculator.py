@@ -1,7 +1,7 @@
 # This is a program that calculates probabilities,
 # printing them to the command line. This file
 # is the main file to be executed.
-import Binomial
+import Binomial, NegativeBinomial
 
 B = Binomial.Binomial()
 
@@ -10,14 +10,18 @@ def Binomial():
     print("-----------------------------------------------")
 
     n , x, p = '', '', ''
-    while n is '':
+    while n == '':
         n = int(input("Enter # of trials: "))
-    while x is '': 
+    while x == '': 
         x = int(input("Enter # of successes: "))
-    while p is '':
+    while p == '':
         p = float(input("Enter probability of success: "))
     ans = B.findProbability(x, n, p, solveFor);
     return ans
+
+def NegBinomial():
+    D = NegativeBinomial();
+    solveFor = D.solveFor
 
 
 def printHeader():
@@ -38,10 +42,11 @@ def main():
     printHeader()
     choice = int(getChoice(0))
     print("-----------------------------------------------")
-    while choice is not 0:
-
+    while choice != 0:
         if choice == 1:
             ans = Binomial()
+        elif choice == 2:
+            ans = NegBinomial()
         
         print("\nAnswer: " + "{:0.5f}".format(ans))
         print("-----------------------------------------------")

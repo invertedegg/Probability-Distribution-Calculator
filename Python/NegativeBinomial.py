@@ -2,7 +2,7 @@
 # needed to find the probability of Binomial distributions
 import math, Combination
 
-class Binomial:
+class NegativeBinomial:
 
     # Determines which type of probability, exact 
     # or cumulative, to solve for
