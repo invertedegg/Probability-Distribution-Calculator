@@ -1,0 +1,4 @@
+Compiling Process
+
+1.  g++ -c <all the .cpp files>
+2. g++ -o <name of executable> *.o

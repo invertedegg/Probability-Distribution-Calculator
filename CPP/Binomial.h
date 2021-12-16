@@ -7,6 +7,8 @@ namespace B
     {
     public:
         void wasChosen();
+        double calculateProbability(int x, int n, double p);
+        double cumulativeProbability(int x, int n, double p, bool t);
     };
 }
 #endif

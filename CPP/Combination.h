@@ -6,8 +6,10 @@ namespace C
     class Combination
     {
         public:
-            int fact(int x);
             int calculateCombination(int n, int r);
+
+        private:
+            int fact(int x);
     };
 }
 
