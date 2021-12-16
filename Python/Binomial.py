@@ -5,11 +5,15 @@ import Combination
 
 class Binomial:
 
+    # Determines which type of probability, exact 
+    # or cumulative, to solve for
     def solveFor(self):
         print("Exact Probability: \t0\nCumulative Probability (X >= x): \t1\nCumulative Probability (X > x): \t2\nCumulative Probability (X <= x): \t3\nCumulative Probability (X < x): \t4")
         x = int(input("Please select value to solve for: "))
         return x
 
+    # Calculates the probability according
+    # to the arguments
     def findProbability(self, x, n, p, s):
         ans = 0
         if s == 0:
