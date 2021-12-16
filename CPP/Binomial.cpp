@@ -1,9 +1,6 @@
 #include "Binomial.h"
 #include "Combination.h"
-#include <stdio.h>
 #include <math.h>
-#include <iostream>
-#include <iomanip>
 using namespace B;
 using namespace C;
 using namespace std;
@@ -31,7 +28,7 @@ double Binomial::cumulativeProbability(int x, int n, double p, bool t)
 
     if(t)
     {
-        for(int a = x; a <= 5; a++)
+        for(int a = x; a <= n; a++)
         {
             ans += calculateProbability(a, n, p);
         }

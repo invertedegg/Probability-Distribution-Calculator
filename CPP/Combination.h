@@ -9,7 +9,7 @@ namespace C
             int calculateCombination(int n, int r);
 
         private:
-            int fact(int x);
+            unsigned long long int fact(int x);
     };
 }
 

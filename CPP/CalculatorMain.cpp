@@ -1,41 +1,42 @@
 #include "Binomial.h"
 #include <stdio.h>
 #include <iostream>
-#include <iomanip>
 using namespace B;
 using namespace std;
 
 void header()
 {
-    cout << "--------------------------------------------\n";
-    cout << "|          Probability Calculator          |\n";
-    cout << "|   By invertedegg (github.com/invertedegg)|\n";
-    cout << "--------------------------------------------\n\n";
+    printf("--------------------------------------------\n|          Probability Calculator          |\n|   By invertedegg (github.com/invertedegg)|\n--------------------------------------------\n\n");
 }
 
 int chooseDistribution()
 {
-    int c;
+    int c = 50;
 
-    cout << "Please choose a distribution to calculate.\nBinomial: 1\nNegative Binomial: 2\nExit: 0" << endl;
-    cin >> c;
-    cout <<  "\n--------------------------------------------" << endl;
+    while(c > 2 || c < 0)
+    {
+        cout << "Please choose a distribution to calculate.\nBinomial: 1\nNegative Binomial: 2\nExit: 0" << endl;
+        cin >> c;
+    }
+    printf("--------------------------------------------\n");
     return c;
 }
 
 int chooseAnswer1()
 {
-    int c;
-
-    cout << "Please choose which condition you are solving for.\nExact Probability: 1\nCumulative Probability: 2" << endl;
-    cin >> c;
-    cout <<  "\n--------------------------------------------" << endl;
+    int c = 50;
+    while (c > 2 || c < 0)
+    {
+        cout << "Please choose which condition you are solving for.\nExact Probability: 1\nCumulative Probability: 2" << endl;
+        cin >> c;
+    }
+    printf("--------------------------------------------\n");
     return c;
 }
 
 int main()
 {
-    int choice;
+    int choice = 12;
     int  x;
     int n;
     double p;
@@ -82,11 +83,11 @@ int main()
                 break;
 
             case 2:
-                cout << "you chose negative binomial";
+                printf("you chose negative binomial");
                 break;
         }
 
-        cout << "\nAnswer:" << fixed << setprecision(2) << ans << "\n--------------------------------------------" << endl;
+        printf("\nAnswer: %f\n--------------------------------------------\n", ans);
 
         choice = chooseDistribution();
     }
